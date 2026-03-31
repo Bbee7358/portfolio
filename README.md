@@ -43,13 +43,14 @@ code .
 2. 作品やプロフィールを書く
 3. GitHub にアップする
 4. Vercel か Netlify で公開する
-5. 独自ドメインをつなぐ
-6. Google Search Console に登録する
-7. サイトマップや `robots.txt` を追加する
+5. `robots.txt` と `sitemap.xml` の URL を自分の公開 URL に直す
+6. 独自ドメインをつなぐ
+7. Google Search Console に登録する
 
 ## 補足
 
 - `Java` は主にアプリやサーバー側で使う言語です。
 - Webサイトの見た目や動きは、まず `HTML` `CSS` `JavaScript` で作るのが基本です。
 - 今ある `Next.js` 関連のファイルは、いったん触らなくて大丈夫です。
+- `robots.txt` と `sitemap.xml` には最初プレースホルダー URL を入れているので、Netlify の URL に置き換えてください。
 # portfolio
