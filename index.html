@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <meta
+      name="description"
+      content="自己紹介、制作実績、連絡先をまとめたシンプルなポートフォリオサイトです。"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__inner">
+        <p class="eyebrow">Portfolio Starter</p>
+        <h1>自分のことが伝わる<br />ポートフォリオサイト</h1>
+        <p class="hero__text">
+          HTML と CSS を中心に、まずは自分で編集しやすい形から始めるためのシンプルなサイトです。
+          あとで作品やプロフィールを入れ替えれば、そのまま自分のポートフォリオに育てられます。
+        </p>
+        <div class="hero__links">
+          <a href="#about" class="button button--primary">自己紹介を見る</a>
+          <a href="#works" class="button button--ghost">制作実績を見る</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="about" class="card">
+        <p class="section-label">About</p>
+        <h2>自己紹介</h2>
+        <p>
+          ここに自分の名前、得意なこと、これまで学んできたことを書いていきます。
+          たとえば「HTML/CSS で見やすいサイトを作るのが好き」「Java
+          を勉強してきた」など、自分らしさが出る内容がおすすめです。
+        </p>
+      </section>
+
+      <section id="skills" class="card card--dark">
+        <p class="section-label">Skills</p>
+        <h2>できること</h2>
+        <ul class="skill-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript の基礎</li>
+          <li>Java の学習経験</li>
+        </ul>
+      </section>
+
+      <section id="works" class="works">
+        <div class="works__header">
+          <div>
+            <p class="section-label">Works</p>
+            <h2>制作実績</h2>
+          </div>
+          <button id="change-message" class="button button--primary" type="button">
+            メッセージを変える
+          </button>
+        </div>
+
+        <div class="works__grid">
+          <article class="work-card">
+            <h3>ポートフォリオサイト</h3>
+            <p>自分のプロフィール、作品、連絡先をまとめるためのWebサイトです。</p>
+          </article>
+          <article class="work-card">
+            <h3>ランディングページ</h3>
+            <p>サービスや商品の魅力を、短い時間で伝えるためのページです。</p>
+          </article>
+          <article class="work-card">
+            <h3>練習用ミニサイト</h3>
+            <p>HTML と CSS を使って、レイアウトや配色を練習した制作物を置けます。</p>
+          </article>
+        </div>
+
+        <p id="message" class="message">
+          ここは JavaScript で文章が変わるエリアです。
+        </p>
+      </section>
+
+      <section id="contact" class="card">
+        <p class="section-label">Contact</p>
+        <h2>連絡先</h2>
+        <p>
+          メール、GitHub、SNS など、自分に連絡してもらうための情報をここに載せます。
+        </p>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
