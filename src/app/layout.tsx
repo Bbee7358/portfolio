@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteName = "Kotaro Portfolio";
+const siteName = "渡邉幸大朗 | Portfolio";
 const siteDescription =
-  "採用担当者・共同研究者・技術審査員に向けて、制作背景と技術判断が伝わるよう整理したポートフォリオです。";
+  "慶應義塾大学総合政策学部の渡邉幸大朗によるポートフォリオ。ロボティクス、メディアアート、Web 制作を横断しながら、背景と判断の見える作品を整理しています。";
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
@@ -15,12 +15,13 @@ export const metadata: Metadata = {
   },
   description: siteDescription,
   keywords: [
-    "portfolio",
+    "渡邉幸大朗",
     "ポートフォリオ",
-    "制作実績",
-    "UI設計",
+    "ロボティクス",
+    "メディアアート",
     "Web制作",
-    "技術ポートフォリオ",
+    "技術開発",
+    "慶應義塾大学",
   ],
   alternates: {
     canonical: "/",
