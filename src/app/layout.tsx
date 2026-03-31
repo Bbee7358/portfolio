@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteName = "My Portfolio";
+const siteName = "Kotaro Portfolio";
 const siteDescription =
-  "自己紹介、制作実績、連絡先をまとめたポートフォリオサイトです。";
+  "採用担当者・共同研究者・技術審査員に向けて、制作背景と技術判断が伝わるよう整理したポートフォリオです。";
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
@@ -17,9 +17,10 @@ export const metadata: Metadata = {
   keywords: [
     "portfolio",
     "ポートフォリオ",
+    "制作実績",
+    "UI設計",
     "Web制作",
-    "Next.js",
-    "TypeScript",
+    "技術ポートフォリオ",
   ],
   alternates: {
     canonical: "/",

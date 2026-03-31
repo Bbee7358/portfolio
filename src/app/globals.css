@@ -1,15 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f3ecde;
-  --foreground: #201a16;
-  --font-sans: "Hiragino Sans", "Yu Gothic", "YuGothic", sans-serif;
-  --font-display: "Avenir Next", "SF Pro Display", "Helvetica Neue", sans-serif;
+  --background: #0f1318;
+  --background-soft: #121821;
+  --foreground: #eef2f6;
+  --muted: #9aa7b4;
+  --muted-strong: #c8d2dc;
+  --panel: rgba(21, 27, 34, 0.9);
+  --panel-subtle: rgba(17, 22, 28, 0.86);
+  --panel-deep: #0d1117;
+  --accent: #78a6d6;
+  --accent-bright: #8eb5dd;
+  --accent-soft: #b4cbe2;
+  --border: rgba(255, 255, 255, 0.1);
+  --font-sans: "IBM Plex Sans", "Inter", "Hiragino Sans", "Yu Gothic", "YuGothic", sans-serif;
+  --font-display: "Sora", "Avenir Next", "SF Pro Display", "Helvetica Neue", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-soft: var(--background-soft);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-strong: var(--muted-strong);
+  --color-panel: var(--panel);
+  --color-panel-subtle: var(--panel-subtle);
+  --color-panel-deep: var(--panel-deep);
+  --color-accent: var(--accent);
+  --color-accent-bright: var(--accent-bright);
+  --color-accent-soft: var(--accent-soft);
+  --color-border: var(--border);
   --font-sans: var(--font-sans);
   --font-display: var(--font-display);
 }
@@ -27,6 +47,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -34,7 +55,100 @@ a {
   text-decoration: none;
 }
 
+p,
+li {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section-kicker {
+  font-size: 0.76rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+
+.section-title {
+  margin-top: 0.9rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.4vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--foreground);
+}
+
+.hero-word-window {
+  position: relative;
+  height: 3.5rem;
+  overflow: hidden;
+}
+
+.hero-word-track {
+  animation: heroWordCycle 10s ease-in-out infinite;
+}
+
+.scroll-indicator {
+  animation: scrollPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes heroWordCycle {
+  0%,
+  17% {
+    transform: translateY(0%);
+  }
+  23%,
+  40% {
+    transform: translateY(-20%);
+  }
+  46%,
+  63% {
+    transform: translateY(-40%);
+  }
+  69%,
+  86% {
+    transform: translateY(-60%);
+  }
+  92%,
+  100% {
+    transform: translateY(-80%);
+  }
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.92;
+  }
+  50% {
+    transform: translateY(22px);
+    opacity: 0.35;
+  }
+}
+
 ::selection {
-  background: #201a16;
-  color: #fffaf2;
+  background: rgba(120, 166, 214, 0.88);
+  color: #081018;
+}
+
+@media (max-width: 640px) {
+  .hero-word-window {
+    height: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-word-track,
+  .scroll-indicator {
+    animation: none;
+  }
 }
