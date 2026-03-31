@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Starter
 
-## Getting Started
+まずは `HTML + CSS + JavaScript` で触りやすく作るための土台です。
+ファイル数をできるだけ少なくして、VSCode で開いてすぐ編集できる形にしています。
 
-First, run the development server:
+## まず見るファイル
+
+- `index.html`
+  ページの内容を書きます。
+- `style.css`
+  見た目を整えます。
+- `script.js`
+  ボタンを押したときの動きなどを追加します。
+
+## VSCode で開く方法
+
+ターミナルでこのフォルダにいる状態なら、次のコマンドで開けます。
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+code .
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+もし `code` が使えないときは、VSCode を開いて
+`File` → `Open Folder...` から `/Users/home_folder/Documents/portfolio` を選びます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ブラウザで確認する方法
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### いちばん簡単
 
-## Learn More
+`index.html` をブラウザにドラッグします。
 
-To learn more about Next.js, take a look at the following resources:
+### VSCode を使う方法
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. VSCode の拡張機能で `Live Server` を入れる
+2. `index.html` を開く
+3. 右下の `Go Live` を押す
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`.vscode/extensions.json` におすすめ拡張は入れてあります。
 
-## Deploy on Vercel
+## Google 検索に出るところまで行く流れ
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. `index.html` のタイトルや説明文を自分用に変える
+2. 作品やプロフィールを書く
+3. GitHub にアップする
+4. Vercel か Netlify で公開する
+5. 独自ドメインをつなぐ
+6. Google Search Console に登録する
+7. サイトマップや `robots.txt` を追加する
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 補足
+
+- `Java` は主にアプリやサーバー側で使う言語です。
+- Webサイトの見た目や動きは、まず `HTML` `CSS` `JavaScript` で作るのが基本です。
+- 今ある `Next.js` 関連のファイルは、いったん触らなくて大丈夫です。
+# portfolio
