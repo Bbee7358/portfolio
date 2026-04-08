@@ -1,56 +1,51 @@
-# Portfolio Starter
+# Portfolio
 
-まずは `HTML + CSS + JavaScript` で触りやすく作るための土台です。
-ファイル数をできるだけ少なくして、VSCode で開いてすぐ編集できる形にしています。
+`Next.js` で作っているポートフォリオサイトです。
+ローカルで確認しながら編集できるように、VSCode のデバッグ設定も入れています。
 
-## まず見るファイル
+## ローカルで確認する方法
 
-- `index.html`
-  ページの内容を書きます。
-- `style.css`
-  見た目を整えます。
-- `script.js`
-  ボタンを押したときの動きなどを追加します。
-
-## VSCode で開く方法
-
-ターミナルでこのフォルダにいる状態なら、次のコマンドで開けます。
+### ターミナルから起動
 
 ```bash
-code .
+npm install
+npm run dev
 ```
 
-もし `code` が使えないときは、VSCode を開いて
-`File` → `Open Folder...` から `/Users/home_folder/Documents/portfolio` を選びます。
+ブラウザで `http://localhost:3000` を開くと確認できます。
+コミットや push をしなくても、保存した内容がローカルで反映されます。
 
-## ブラウザで確認する方法
+### VSCode から起動
 
-### いちばん簡単
+`.vscode/launch.json` を入れてあるので、VSCode の `Run and Debug` から次が使えます。
 
-`index.html` をブラウザにドラッグします。
+- `Next.js: dev server`
+  開発サーバーだけ起動
+- `Next.js: browser`
+  すでにサーバーが立っている状態でブラウザを開く
+- `Next.js: full stack`
+  サーバー起動とブラウザ起動をまとめて実行
 
-### VSCode を使う方法
+いちばん簡単なのは `Next.js: full stack` を選んで `F5` です。
 
-1. VSCode の拡張機能で `Live Server` を入れる
-2. `index.html` を開く
-3. 右下の `Go Live` を押す
+## 主に触るファイル
 
-`.vscode/extensions.json` におすすめ拡張は入れてあります。
+- `src/app/page.tsx`
+  トップページの内容
+- `src/app/layout.tsx`
+  タイトルや説明文などの共通設定
+- `src/app/globals.css`
+  全体の配色や余白、アニメーション
 
-## Google 検索に出るところまで行く流れ
+## 公開前の確認
 
-1. `index.html` のタイトルや説明文を自分用に変える
-2. 作品やプロフィールを書く
-3. GitHub にアップする
-4. Vercel か Netlify で公開する
-5. `robots.txt` と `sitemap.xml` の URL を自分の公開 URL に直す
-6. 独自ドメインをつなぐ
-7. Google Search Console に登録する
+```bash
+npm run lint
+npm run build
+```
 
 ## 補足
 
-- `Java` は主にアプリやサーバー側で使う言語です。
-- Webサイトの見た目や動きは、まず `HTML` `CSS` `JavaScript` で作るのが基本です。
-- 今ある `Next.js` 関連のファイルは、いったん触らなくて大丈夫です。
-- `robots.txt` と `sitemap.xml` には最初プレースホルダー URL を入れているので、Netlify の URL に置き換えてください。
-# portfolio
+- ローカル確認だけなら commit は不要です。
+- Netlify に反映したいときだけ `git push` します。
+- Google 検索向けの `robots.txt` と `sitemap.xml` は Next.js 側で生成しています。
